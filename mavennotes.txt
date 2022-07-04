@@ -1,0 +1,87 @@
+Maven is a powerful project management tool that is based on POM (project object model). It is used for projects build, dependency and documentation.
+
+It simplifies the build process like ANT. But it is too much advanced than ANT.
+
+ maven means "accumulator of knowledge"
+
+Advantages of maven:
+1:
+it makes a project easy to build
+2:we can shift to new features of maven
+3:it also provides project menu ie:
+1)dependency list
+2)log document
+3)mailing list
+4:maven projects can be shred by all 
+
+
+A build tool takes care of everything for building a process.
+
+Generates source code (if auto-generated code is used)
+Generates documentation from source code
+Compiles source code
+Packages compiled code into JAR of ZIP file
+Installs the packaged code in local repository, server repository, or central repository
+
+
+Maven architecture:
+Every Maven project contains a POM file that defines the project 
+essentials.
+2:
+
+firstly local respository was present and then in middle there is  a build system
+build system contains:pom.xml,maven
+maven again has site 
+and then last there is central repository and remote repository here bothe are in bidirectional to build system
+
+POM:
+A Project Object Model (POM) provides all the configuration for a single project
+Individual phases of the build process can also be configured, they are 
+implemented as plugins.
+Example: Configure the compiler-plugin to use Java version 1.8 for 
+compilation
+
+
+Maven Repository?
+
+Maven repository are of three types. The following illustration will give an idea regarding these three types.
+
+local:Maven local repository is a folder location on your machine. It gets created when you run any maven command for the first time.
+central:t contains a large number of commonly used libraries.
+
+When Maven does not find any dependency in local repository, it starts searching in central repository using following URL − https://repo1.maven.org/maven2/
+
+
+
+remote:Sometimes, Maven does not find a mentioned dependency in central repository as well. It then stops the build process and output error message to console. To prevent such situation, Maven provides concept of Remote Repository, which is developer's own custom repository containing required libraries or other project jars.
+
+Difference between  maven and maven repository:
+
+maven was The first one is the official central search engine of Central Repository handled
+======Maven will resolve plugin dependencies using the configured pluginRepository. Other artifact dependencies (eg. a parent pom) are resolved using repository.
+
+MAVEN COMMANDS
+mvn --version	     Prints out the version of Maven you are running.
+mvn clean	      Clears the target directory into which Maven normally builds your project.
+mvn package	      Builds the project and packages the resulting JAR file into the target directory.
+mvn verify	      Runs all integration tests found in the project.
+To execute the site build life cycle you execute this command:
+mvn site
+
+mvn compile
+This example Maven command executes the compile build phase of the default build life cycle. This Maven command also executes all earlier build phases in the default build life cycle, meaning the validate build phase.
+
+
+What Information Does Pom Contain?
+POM refers to Project Object Model. It is an XML file which contains the information about the project and various configuration detail used by Maven to build the project like build directory, source directory, dependencies, test source directory, plugin, goals etc.
+
+
+what is artifactid and group id:
+groupId specifies the id of the project group while artifactId specifies the id of the project. In brief, these elements help to organize the projects of the organization.
+
+
+Why should we use Maven?
+The reason why we should use it.
+
+It is a build tool that allows generating libraries like the jar file, but the code is packaged into a distributable library.
+Being a dependency management tool, the obtaining and the management of the dependencies is changed then how we deal with them in general.
